@@ -15,6 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.Infrastructure", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex.WebApi", "src\Pokedex.WebApi\Pokedex.WebApi.csproj", "{0E4DEAE2-EEA7-45C4-8CD3-2A903048A773}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{0A0DE7B0-36F6-480F-B96D-EACEB0D4A17C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F398D21A-A926-422F-9EFD-01B1506EE07A}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-pipeline.yml = .github\workflows\ci-pipeline.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +53,7 @@ Global
 		{40CCFC65-DC84-4091-9CA4-97A09C123A5C} = {4D802A03-5B91-4C23-9E42-FC62A857906F}
 		{77EE5DF6-FE4D-485A-BCE1-13B854B73DD4} = {4D802A03-5B91-4C23-9E42-FC62A857906F}
 		{0E4DEAE2-EEA7-45C4-8CD3-2A903048A773} = {4D802A03-5B91-4C23-9E42-FC62A857906F}
+		{F398D21A-A926-422F-9EFD-01B1506EE07A} = {0A0DE7B0-36F6-480F-B96D-EACEB0D4A17C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1302999-8A34-455E-B428-0C647D266664}
