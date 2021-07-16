@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\ci-pipeline.yml = .github\workflows\ci-pipeline.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex.Infrastructure.Unit.Tests", "tests\Pokedex.Infrastructure.Unit.Tests\Pokedex.Infrastructure.Unit.Tests.csproj", "{0AB118A8-1317-4D3B-9150-017C1450C109}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{0E4DEAE2-EEA7-45C4-8CD3-2A903048A773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E4DEAE2-EEA7-45C4-8CD3-2A903048A773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E4DEAE2-EEA7-45C4-8CD3-2A903048A773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB118A8-1317-4D3B-9150-017C1450C109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB118A8-1317-4D3B-9150-017C1450C109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB118A8-1317-4D3B-9150-017C1450C109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB118A8-1317-4D3B-9150-017C1450C109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{77EE5DF6-FE4D-485A-BCE1-13B854B73DD4} = {4D802A03-5B91-4C23-9E42-FC62A857906F}
 		{0E4DEAE2-EEA7-45C4-8CD3-2A903048A773} = {4D802A03-5B91-4C23-9E42-FC62A857906F}
 		{F398D21A-A926-422F-9EFD-01B1506EE07A} = {0A0DE7B0-36F6-480F-B96D-EACEB0D4A17C}
+		{0AB118A8-1317-4D3B-9150-017C1450C109} = {3FA673BF-B399-4E38-AC4C-E7DD83808329}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1302999-8A34-455E-B428-0C647D266664}
