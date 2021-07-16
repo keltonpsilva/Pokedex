@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Pokedex.Application.Interfaces;
+using Pokedex.Infrastructure.Commands.Translations;
 using Pokedex.Infrastructure.Integrations.FunTranslationsApi;
 using Pokedex.Infrastructure.Integrations.FunTranslationsApi.Interfaces;
 using Pokedex.Infrastructure.Integrations.PokeApi;
@@ -12,6 +14,7 @@ namespace Pokedex.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             AddIoC(services);
+            AddCommand(services);
 
             services.AddSingleton<IRestClient, RestClient>();
 
@@ -25,6 +28,11 @@ namespace Pokedex.Infrastructure
 
             services.AddSingleton<IFunTranslationsApiConfigurations, FunTranslationsApiConfigurations>();
             services.AddSingleton<IFunTranslationsApiClient, FunTranslationsApiClient>();
+        }
+
+        private static void AddCommand(IServiceCollection services)
+        {
+            services.AddSingleton<ITranslationCommand, FunTranslationsTranslationCommand>();
         }
     }
 }
