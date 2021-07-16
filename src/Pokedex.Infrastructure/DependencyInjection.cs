@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Pokedex.Infrastructure.Integrations.FunTranslationsApi;
+using Pokedex.Infrastructure.Integrations.FunTranslationsApi.Interfaces;
 using Pokedex.Infrastructure.Integrations.PokeApi;
 using Pokedex.Infrastructure.Integrations.PokeApi.Interfaces;
 using RestSharp;
@@ -20,6 +22,9 @@ namespace Pokedex.Infrastructure
         {
             services.AddSingleton<IPokeApiConfigurations, PokeApiConfigurations>();
             services.AddSingleton<IPokeApiClient, PokeApiClient>();
+
+            services.AddSingleton<IFunTranslationsApiConfigurations, FunTranslationsApiConfigurations>();
+            services.AddSingleton<IFunTranslationsApiClient, FunTranslationsApiClient>();
         }
     }
 }

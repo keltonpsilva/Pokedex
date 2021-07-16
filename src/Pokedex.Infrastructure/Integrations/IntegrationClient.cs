@@ -1,5 +1,6 @@
 ﻿using Pokedex.Infrastructure.Integrations.Interfaces;
 using RestSharp;
+using RestSharp.Serializers.NewtonsoftJson;
 using System;
 
 namespace Pokedex.Infrastructure.Integrations
@@ -11,6 +12,7 @@ namespace Pokedex.Infrastructure.Integrations
         public IntegrationClient(IRestClient restClient)
         {
             _restClient = restClient;
+            _restClient.UseNewtonsoftJson();
         }
 
         public IRestResponse ExecuteRequest(string baseUrl, IRestRequest request)
