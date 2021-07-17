@@ -24,5 +24,23 @@ namespace Pokedex.WebApi.Integration.Tests.Controllers
             Assert.That(responseContent, Is.Not.Null);
             Assert.That(responseContent.Name, Is.EqualTo(pokemonName));
         }
+
+        [Test]
+        [Ignore(" For public API calls this is 60 API calls a day with distribution of 5 calls an hour")]
+        public async Task Translate_ValidPokemonName_ShouldReturnOkResponseWithPokemonDataAndDescriptionTranslated()
+        {
+            // Arrange
+            var pokemonName = "charizard";
+            var expectedTranslation = "Spits fire yond is hot enow to melt boulders. Known to cause forest fires unintentionally.";
+
+            // Act
+            var response = await Client.GetAsync($"api/pokemon/translate/{pokemonName}");
+            var responseContent = JsonConvert.DeserializeObject<Pokemon>(await response.Content.ReadAsStringAsync());
+
+            // Assert
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(responseContent, Is.Not.Null);
+            Assert.That(responseContent.Description, Is.EqualTo(expectedTranslation));
+        }
     }
 }
