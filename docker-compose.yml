@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  pokedex-api:
+    container_name: pokedex-api
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "3000:80"
